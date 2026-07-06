@@ -1,4 +1,3 @@
-// components/Navbar.jsx
 import "../styles/navbar.css";
 
 function Navbar({ setIsOpen }) {
@@ -14,6 +13,7 @@ function Navbar({ setIsOpen }) {
           <a href="#">HOME</a>
           <a href="#">ABOUT US</a>
           <a href="#">MENU</a>
+          <a href="#">ROOMS</a>
           <a href="#">CONTACT</a>
           <a href="#" className="btn"><span>Book Now</span></a>
 
