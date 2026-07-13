@@ -5,7 +5,7 @@ function HomeVid(){
     return(
         <section className="home">
             <video className="home-video" autoPlay muted loop playsInline>
-                <source src="/My Movie.mp4" type="video/mp4"/>
+                <source src="src/videos/MyMovie.mp4" type="video/mp4"/>
             </video>
 
             <div className="home-text">
