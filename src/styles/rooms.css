@@ -1,0 +1,283 @@
+.rooms-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+.rooms-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.rooms-swiper .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.room-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.room-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    z-index: 1;
+}
+
+.room-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.room-subtitle {
+    color: #e4c590;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.room-overlay h2 {
+    color: white;
+    font-family: 'Forum', serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.room-overlay p {
+    color: #ddd;
+    max-width: 700px;
+    line-height: 1.8;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    margin-bottom: 35px;
+}
+
+.room-overlay button {
+    background: transparent;
+    color: #e4c590;
+    border: 2px solid #e4c590;
+    padding: 14px 36px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .35s ease;
+}
+
+.room-overlay button:hover {
+    background: #e4c590;
+    color: #000;
+}
+
+.rooms-swiper .swiper-pagination {
+    bottom: 35px !important;
+}
+
+.rooms-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,.35);
+    opacity: 1;
+    transition: .3s;
+}
+
+.rooms-swiper .swiper-pagination-bullet-active {
+    background: #e4c590;
+    transform: scale(1.25);
+}
+
+.rooms-swiper .swiper-button-next,
+.rooms-swiper .swiper-button-prev {
+    color: #e4c590;
+}
+
+.gallery-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    z-index: 99999;
+    animation: fadeIn .35s ease;
+}
+
+.gallery-content {
+    position: relative;
+    width: min(1200px,95%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #0f0f0f;
+    border: 1px solid #e4c590;
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.gallery-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.gallery-content::-webkit-scrollbar-thumb {
+    background: #e4c590;
+    border-radius: 20px;
+}
+
+.gallery-content h2 {
+    color: white;
+    font-family: 'Forum', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.gallery-description {
+    color: #d5d5d5;
+    text-align: center;
+    max-width: 700px;
+    margin: auto auto 50px;
+    line-height: 1.8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 25px;
+}
+
+.gallery-grid img,
+.gallery-grid video {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #e4c590;
+    transition: .35s;
+}
+
+.gallery-grid img:hover,
+.gallery-grid video:hover {
+    transform: scale(1.03);
+    box-shadow:
+        0 0 12px #e4c590,
+        0 0 35px rgba(228,197,144,.35);
+}
+
+.gallery-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.gallery-close:hover {
+    color: #e4c590;
+    font-size: 38px;
+}
+
+.gallery-footer {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(228,197,144,.25);
+    padding-top: 30px;
+}
+
+.gallery-book-btn {
+    background: #e4c590;
+    color: #000;
+    border: 2px solid #e4c590;
+    padding: 15px 45px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .35s ease;
+}
+
+.gallery-book-btn:hover {
+    background: transparent;
+    color: #e4c590;
+    box-shadow: 0 0 15px rgba(228,197,144,.5);
+}
+
+.booking-hours {
+    color: #bdbdbd;
+    margin-top: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width:768px) {
+
+    .rooms-section {
+        height: 70vh;
+    }
+
+    .room-overlay h2 {
+        font-size: 2.5rem;
+    }
+
+    .room-overlay p {
+        font-size: .95rem;
+    }
+
+    .room-overlay button {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+
+    .gallery-content {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .gallery-content h2 {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img,
+    .gallery-grid video {
+        height: 220px;
+    }
+}
