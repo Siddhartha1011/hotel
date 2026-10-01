@@ -130,6 +130,8 @@
 
 /* MOBILE */
 
+/* MOBILE */
+
 @media (max-width: 580px) {
 
     .aboutus {
@@ -152,8 +154,15 @@
         margin-bottom: 60px;
     }
 
+    /* Remove the large left gap */
+    .img-main {
+        padding-left: 0;
+        justify-content: center;
+    }
+
     .img-main img {
-        padding-left: 30px;
+        padding-left: 0;
+        width: 100%;
     }
 
     .img-side {
